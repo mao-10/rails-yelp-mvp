@@ -1,13 +1,13 @@
 <div class="container ">
   <div class="top-section flex-column text-center">
     <h1 class=""> <%=@restaurant.name  %> </h1>
-    <%= link_to "Write a Review", new_restaurant_review_path(@restaurant.id), class: "text-decoration-none btn btn-primary m-2" %>
+    <%= link_to "Write a Review", new_restaurant_review_path(@restaurant.id), class: "text-decoration-none btn btn-primary m-2 bg-secondary" %>
   </div>
   <div class="container">
     <ul class="list-group">
-      <li class="list-group-item"><p>Address: </p><%= @restaurant.address %></li>
-      <li class="list-group-item"><p>Phone Number: </p><%= @restaurant.phone_number %></li>
-      <li class="list-group-item"><p>Category: </p><%= @restaurant.category %></li>
+      <li class="list-group-item text-black"><p>Address: </p><%= @restaurant.address %></li>
+      <li class="list-group-item text-black"><p>Phone Number: </p><%= @restaurant.phone_number %></li>
+      <li class="list-group-item text-black"><p>Category: </p><%= @restaurant.category %></li>
   </ul>
   </div>
 
