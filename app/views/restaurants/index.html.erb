@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class="text-center"> All Restaurants </h1>
+  <%# <%= link_to "Add a Restaurant", new_restaurant_path, class: "text-decoration-none btn btn-primary m-5" %>
+  <ul class="list-group">
+    <% @restaurants.each do |restaurant|%>
+      <li class="list-group-item"> <%= link_to restaurant.name, restaurant_path(restaurant), class: "text-decoration-none"%></li>
+    <%end%>
+  </ul>
+</div>

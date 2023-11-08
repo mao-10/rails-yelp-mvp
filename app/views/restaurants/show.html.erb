@@ -1,0 +1,25 @@
+<div class="container ">
+  <div class="top-section flex-column text-center">
+    <h1 class=""> <%=@restaurant.name  %> </h1>
+    <%= link_to "Write a Review", new_restaurant_review_path(@restaurant.id), class: "text-decoration-none btn btn-primary m-2" %>
+  </div>
+  <div class="container">
+    <ul class="list-group">
+      <li class="list-group-item"><p>Address: </p><%= @restaurant.address %></li>
+      <li class="list-group-item"><p>Phone Number: </p><%= @restaurant.phone_number %></li>
+      <li class="list-group-item"><p>Category: </p><%= @restaurant.category %></li>
+  </ul>
+  </div>
+
+
+  <%# <% @restaurant.reviews[0].content %>
+  <div class="container">
+    <h3>Reviews</h3>
+    <ul class="list-group">
+      <% @restaurant.reviews.each do |review| %>
+        <li class="list-group-item"><%= review.content %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<%# <%= link_to "Go back to list", restaurants_path, class: "text-decoration-none" %>
